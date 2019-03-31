@@ -74,8 +74,9 @@ public class MainActivity extends AppCompatActivity {
         c.moveToFirst();
         while(c.moveToNext())
         {
-            buffer.append("SSID: ").append(c.getString(1)).append("\t\t");
-            buffer.append("Strength: ").append(c.getString(2)).append("dBm\n");
+            // removed the ssid since it was not being stored and changed the index of strength to 1
+            // buffer.append("SSID: ").append(c.getString(1)).append("\t\t");
+            buffer.append("Strength: ").append(c.getString(1)).append("dBm\n");
         }
         database.setText(buffer);
     }
